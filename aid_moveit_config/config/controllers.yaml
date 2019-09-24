@@ -1,0 +1,13 @@
+controller_list:
+  - name: aid/aid_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - shoulder_joint
+      - bigarm_joint
+      - elbow_joint
+      - wrist1_joint
+      - wrist2_joint
+      - palm_joint
+

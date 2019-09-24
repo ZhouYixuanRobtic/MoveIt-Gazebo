@@ -1,0 +1,39 @@
+aid:
+  # publish all joint states--------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Gazebo use controller that ros_control(joint_position_controller)
+  # Position Controllers------------------
+  aid_arm_controller:
+        type: position_controllers/JointTrajectoryController
+        joints:
+            - shoulder_joint
+            - bigarm_joint
+            - elbow_joint
+            - wrist1_joint
+            - wrist2_joint
+            - palm_joint
+        
+        constraints:
+            goal_time: &goal_time_constraint 4.0
+            stopped_velocity_tolerance: 0.05
+            shoulder_Joint:
+                goal: &goal_pos_constraint 0.1
+                trajectory: &trajectory_pos_constraint 0.1
+            bigarm_joint:
+                goal: *goal_pos_constraint
+                trajectory: *trajectory_pos_constraint
+            elbow_Joint:
+                goal: *goal_pos_constraint
+                trajectory: *trajectory_pos_constraint         
+            wrist1_joint:
+                goal: *goal_pos_constraint
+                trajectory: *trajectory_pos_constraint
+            wrist2_joint:
+                goal: *goal_pos_constraint
+                trajectory: *trajectory_pos_constraint
+            palm_joint:
+                goal: *goal_pos_constraint
+                trajectory: *trajectory_pos_constraint  

@@ -1,0 +1,3 @@
+controller_joint_names: [shoulder_joint, bigarm_joint, elbow_joint, wrist1_joint, wrist2_joint, palm_joint]
+robot_name: aid
+

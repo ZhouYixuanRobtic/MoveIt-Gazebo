@@ -1,0 +1,12 @@
+controller_list:
+  - name: fake_aid_arm_controller
+    joints:
+      - shoulder_joint
+      - bigarm_joint
+      - elbow_joint
+      - wrist1_joint
+      - wrist2_joint
+      - palm_joint
+  - name: fake_ee_group_controller
+    joints:
+      []
