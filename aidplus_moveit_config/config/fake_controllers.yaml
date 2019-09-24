@@ -1,0 +1,37 @@
+controller_list:
+  - name: fake_aidplus_left_arm_controller
+    joints:
+      - left_shoulder_joint
+      - left_bigarm_joint
+      - left_elbow_joint
+      - left_wrist1_joint
+      - left_wrist2_joint
+      - left_palm_joint
+  - name: fake_aidplus_right_arm_controller
+    joints:
+      - right_shoulder_joint
+      - right_bigarm_joint
+      - right_elbow_joint
+      - right_wrist1_joint
+      - right_wrist2_joint
+      - right_palm_joint
+  - name: fake_left_ee_group_controller
+    joints:
+      []
+  - name: fake_right_ee_group_controller
+    joints:
+      []
+  - name: fake_aidplus_group_controller
+    joints:
+      - left_shoulder_joint
+      - left_bigarm_joint
+      - left_elbow_joint
+      - left_wrist1_joint
+      - left_wrist2_joint
+      - left_palm_joint
+      - right_shoulder_joint
+      - right_bigarm_joint
+      - right_elbow_joint
+      - right_wrist1_joint
+      - right_wrist2_joint
+      - right_palm_joint
