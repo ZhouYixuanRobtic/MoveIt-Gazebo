@@ -4,7 +4,22 @@
 
 ​	First We wanna list most important components versions out, they are SolidWorks 2016 + Ubuntu 16.04 + ROS kinetic + Gazebo 9.0 + MoveIt. Some other components like `ros_control` and `sw_urdf_exporter` will be mentioned when needed. Before we start, you should already have a proper SolidWorks model.
 
-[TOC]
+[From SolidWorks to custom movable robot in Gazebo with MoveIt](##From From SolidWorks to custom movable robot in Gazebo with MoveIt )
+
+​	[1. Convert SolidWorks model to URDF](###1. Convert SolidWorks model to URDF)
+
+​	[2. Add controllers and everything needed in URDF](###2. Add controllers and everything needed in URDF)
+
+​	[3. Gazebo Control](###3. Gazebo Control)
+
+​	[4. MoveIt configuration](###4. MoveIt configuration)
+
+​	[5. Check your MoveIt setup under Rviz](###5. Check your MoveIt setup under Rviz)
+
+​	[6. Use Gazebo + Rviz to simulate](###6. Use Gazebo + Rviz to simulate)
+
+​	[7. Issues and Solutions](###7. Issues and Solutions)
+
 
 ### 1 .Convert SolidWorks model to URDF
 
@@ -207,13 +222,6 @@ copy the content below. Please modify `****` and `$(arg RobotName)`.
 	<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
                                         output="screen" ns="/$(arg RobotName)" args="joint_state_controller $(arg RobotName)_arm_controller"/>
  
-
-  <!-- 3.run transform node /joint_state -> /gazebo every joint/command -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher"  type="robot_state_publisher"  respawn="false" output="screen">
-    <remap from="/joint_states" to="/$(arg RobotName)/joint_states" />
-  </node>
-
-
 </launch>
 ```
 
