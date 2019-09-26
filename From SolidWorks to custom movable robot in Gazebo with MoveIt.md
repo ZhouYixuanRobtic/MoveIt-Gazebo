@@ -6,19 +6,19 @@
 
 [From SolidWorks to custom movable robot in Gazebo with MoveIt](##From From SolidWorks to custom movable robot in Gazebo with MoveIt )
 
-​	[1. Convert SolidWorks model to URDF](###1. Convert SolidWorks model to URDF)
+​	[1. Convert SolidWorks model to URDF](#1-convert-solidworks-model-to-urdf)
 
-​	[2. Add controllers and everything needed in URDF](###2. Add controllers and everything needed in URDF)
+​	[2. Add controllers and everything needed in URDF](#2-add-controllers-and-everything-needed-in-urdf)
 
-​	[3. Gazebo Control](###3. Gazebo Control)
+​	[3. Gazebo Control](#3-gazebo-control)
 
-​	[4. MoveIt configuration](###4. MoveIt configuration)
+​	[4. MoveIt configuration](#4-moveit-configuration)
 
-​	[5. Check your MoveIt setup under Rviz](###5. Check your MoveIt setup under Rviz)
+​	[5. Check your MoveIt setup under Rviz](#5-check-your-moveit-setup-under-rviz)
 
-​	[6. Use Gazebo + Rviz to simulate](###6. Use Gazebo + Rviz to simulate)
+​	[6. Use Gazebo + Rviz to simulate](#6-use-gazebo--rviz-to-simulate)
 
-​	[7. Issues and Solutions](###7. Issues and Solutions)
+​	[7. Issues and Solutions](#7-issues-and-solutions)
 
 
 ### 1 .Convert SolidWorks model to URDF
