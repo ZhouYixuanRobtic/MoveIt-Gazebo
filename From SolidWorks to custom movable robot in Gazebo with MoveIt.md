@@ -4,7 +4,7 @@
 
 ​	First We wanna list most important components versions out, they are SolidWorks 2016 + Ubuntu 16.04 + ROS kinetic + Gazebo 9.0 + MoveIt. Some other components like `ros_control` and `sw_urdf_exporter` will be mentioned when needed. Before we start, you should already have a proper SolidWorks model.
 
-[From SolidWorks to custom movable robot in Gazebo with MoveIt](##From From SolidWorks to custom movable robot in Gazebo with MoveIt )
+[From SolidWorks to custom movable robot in Gazebo with MoveIt](From-Solidworks-to-custom-movable-robot-in-gazebo-with-moveit )
 
 ​	[1. Convert SolidWorks model to URDF](#1-convert-solidworks-model-to-urdf)
 
