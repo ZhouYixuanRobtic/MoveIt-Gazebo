@@ -30,12 +30,4 @@
                                         output="screen" ns="/aidplus" args="joint_state_controller aidplus_right_arm_controller aidplus_left_arm_controller"/>
  
 
-  <!-- 3.run transform node /joint_state -> /gazebo every joint/command -->
-  <!-- node name="aid_gazebo_driver" pkg="aid_driver" type="aid_gazebo_driver" /-->
-
-  <node name="robot_state_publisher" pkg="robot_state_publisher"  type="robot_state_publisher"  respawn="false" output="screen">
-    <remap from="/joint_states" to="/aidplus/joint_states" />
-  </node>
-
-
 </launch>

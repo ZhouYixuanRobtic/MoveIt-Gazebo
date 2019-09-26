@@ -29,14 +29,6 @@
   <!-- 加载控制器 -->
 	<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
                                         output="screen" ns="/$(arg RobotName)" args="joint_state_controller $(arg RobotName)_arm_controller"/>
- 
-
-  <!-- 3.run transform node /joint_state -> /gazebo every joint/command -->
-  <!-- node name="aid_gazebo_driver" pkg="aid_driver" type="aid_gazebo_driver" /-->
-
-  <node name="robot_state_publisher" pkg="robot_state_publisher"  type="robot_state_publisher"  respawn="false" output="screen">
-    <remap from="/joint_states" to="/$(arg RobotName)/joint_states" />
-  </node>
 
 
 </launch>
