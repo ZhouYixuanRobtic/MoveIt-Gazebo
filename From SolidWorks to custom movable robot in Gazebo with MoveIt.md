@@ -1,6 +1,6 @@
 ## From SolidWorks to custom movable robot in Gazebo with MoveIt
 
-​	This tutorial aims at providing a propagable path from SolidWorks to  a movable robot in Gazebo with MoveIt. A complete example could be found  [here]()
+​	This tutorial aims at providing a propagable path from SolidWorks to  a movable robot in Gazebo with MoveIt. A complete example could be found  [here](https://github.com/ZhouYixuanRobtic/MoveIt-Gazebo)
 
 ​	First We wanna list most important components versions out, they are SolidWorks 2016 + Ubuntu 16.04 + ROS kinetic + Gazebo 9.0 + MoveIt. Some other components like `ros_control` and `sw_urdf_exporter` will be mentioned when needed. Before we start, you should already have a proper SolidWorks model.
 
