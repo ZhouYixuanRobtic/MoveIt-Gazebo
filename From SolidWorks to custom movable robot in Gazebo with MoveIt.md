@@ -23,7 +23,7 @@
 
 ### 1 .Convert SolidWorks model to URDF
 
-​	[URDF](<http://wiki.ros.org/urdf>) is an XML format for representing a robot model. We use *URDF* to spawn robot *RVIZ* and *GAZEBO*.
+​	[URDF](<http://wiki.ros.org/urdf>) is an XML format for representing a robot model. We use *URDF* to spawn robot in *RVIZ* and *GAZEBO*.
 
 - **Export**
 
@@ -39,7 +39,7 @@
 
   - **Initial Pose**
 
-    In the process of exporting, the initial pose of the model will be considered as the reference of *URDF*. So try to put your model at a stable position even with gravity. 
+    In the process of exporting, the initial pose of the model will be considered as the reference of *URDF*. So try to put your model at a stable position even without gravity. 
     
   - **Name it regularly**
 
@@ -229,7 +229,7 @@ Save it and Gazebo Control is setup properly.  Run `roslaunch RobotName RobotNam
 
 ### 4. MoveIt configuration
 
- 	*MoveIt* is a motion planning framework which helps us to make a useful plan through a certain target. The official *MoveIt* tutorial is beginner-friendly, so we do recommend to read the official *MoveIt* [tutorial](http://docs.ros.org/kinetic/api/moveit_tutorials/html/doc/getting_started/getting_started.html). Under the purpose that we want to use *MoveIt* to accomplish the simulation with Gazebo, we are not only required to provide a complete  *MoveIt* configuration package but also expected to give some new configuration files. We'll begin with the official *MoveIt* configuration. Till now, the best kinematic solver supported by MoveIt is `trac_ik`, use `sudo apt-get install ros-kinetic-trac-ik-kinematics-plugin` to install it.
+ *MoveIt* is a motion planning framework which helps us to make a useful plan through a certain target. The official *MoveIt* tutorial is beginner-friendly, so we do recommend to read the official *MoveIt* [tutorial](http://docs.ros.org/kinetic/api/moveit_tutorials/html/doc/getting_started/getting_started.html). Under the purpose that we want to use *MoveIt* to accomplish the simulation with Gazebo, we are not only required to provide a complete  *MoveIt* configuration package but also expected to give some new configuration files. We'll begin with the official *MoveIt* configuration. Till now, the best kinematic solver supported by MoveIt is `trac_ik`, use `sudo apt-get install ros-kinetic-trac-ik-kinematics-plugin` to install it.
 
 ```
 roslaunch moveit_setup_assistant setup_assistant.launch
@@ -274,7 +274,7 @@ Built on our practice, set up a end-effector group separately can be helpful. Mo
   </joint>
 ```
 
-**Noted: the ee_link here is a virtual and no-volume link,  set the joint value according to actual demands, for example the tip of a finger**
+**Noted: the ee_link here is a virtual and no-Volume link,  set the joint value according to actual demands, for example the tip of a finger**
 
 - robot poses
 
