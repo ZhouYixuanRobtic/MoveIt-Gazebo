@@ -29,7 +29,7 @@ public:
     Manipulator(const std::string & planning_group);
     ~Manipulator();
     void addStaticPlanningConstraint() const;
-    void goRandomValid() const;
+    bool goRandomValid() const;
 };
 
 

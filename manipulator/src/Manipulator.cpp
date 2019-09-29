@@ -34,17 +34,14 @@ void Manipulator::addStaticPlanningConstraint() const
     objects.push_back(collision_object);
     planning_scene_interface->addCollisionObjects(objects);
 }
-void Manipulator::goRandomValid() const
+bool Manipulator::goRandomValid() const
 {
     while(ros::ok())
     {
         move_group->setRandomTarget();
         moveit::planning_interface::MoveGroupInterface::Plan my_plan;
         if(move_group->plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS)
-        {
-            move_group->execute(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS;
-            break;
-        }
+            return move_group->execute(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS;
         usleep(500000);
     }
 }
