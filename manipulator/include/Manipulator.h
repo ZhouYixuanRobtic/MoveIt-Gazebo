@@ -21,10 +21,22 @@ class Manipulator {
 private:
     ros::NodeHandle n_;
     std::string _PLANNING_GROUP_;
-    std::string EE_NAME{};
+    std::string EE_NAME;
     moveit::planning_interface::MoveGroupInterface *move_group;
     moveit::planning_interface::PlanningSceneInterface *planning_scene_interface;
     const robot_state::JointModelGroup* joint_model_group;
+
+    enum MultiplyType{
+        RIGHT,
+        LEFT,
+    };
+    Eigen::Affine3d Trans_B2E_;
+    Eigen::Affine3d getEndMotion(MultiplyType multiply_type,
+                                 const Eigen::Vector3d & Translation,
+                                 const Eigen::Vector3d & RPY = Eigen::Vector3d(0.0, 0.0, 0.0));
+    bool linearMoveTo(const Eigen::Vector3d & destination, double velocity_scale);
+    double allClose(const std::vector<double> & goal) const;
+    void scale_trajectory_speed(moveit::planning_interface::MoveGroupInterface::Plan & plan, double scale_factor) const;
 public:
     Manipulator(const std::string & planning_group);
     ~Manipulator();

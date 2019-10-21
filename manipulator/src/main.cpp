@@ -1,4 +1,4 @@
-#include "Manipulator.h"
+#include "../include/Manipulator.h"
 int main(int argc, char* argv[])
 {
     ros::init(argc,argv,"moveit_manipulation");

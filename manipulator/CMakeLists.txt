@@ -36,6 +36,7 @@ include_directories (
         SYSTEM
         ${EIGEN3_INCLUDE_DIRS}
         ${catkin_INCLUDE_DIRS}
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 link_directories(
         ${catkin_LIBRARY_DIRS}
